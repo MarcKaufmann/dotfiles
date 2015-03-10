@@ -16,3 +16,9 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "bundle/julia-vim"]
+	path = bundle/julia-vim
+	url = https://github.com/JuliaLang/julia-vim.git
+[submodule "bundle/vim-racket"]
+	path = bundle/vim-racket
+	url = https://github.com/wlangstroth/vim-racket.git
