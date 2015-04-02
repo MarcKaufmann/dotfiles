@@ -27,3 +27,6 @@ au BufNewFile,BufRead *.md set filetype=markdown
 
 " Set spacing 
 set ts=4 sts=4 sw=4 noexpandtab
+
+" Add keywords to the syntax of racket.
+set lispwords+=define-type,type-case,syntax-case,syntax-rules
