@@ -30,3 +30,6 @@ set ts=4 sts=4 sw=4 noexpandtab
 
 " Add keywords to the syntax of racket.
 set lispwords+=define-type,type-case,syntax-case,syntax-rules
+
+" Quick pdf creation
+nnoremap <Leader>p :Pandoc --template=~/Git/projection-bias/config/latex.template pdf<cr>
