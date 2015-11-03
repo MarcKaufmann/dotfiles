@@ -33,3 +33,12 @@ set lispwords+=define-type,type-case,syntax-case,syntax-rules
 
 " Quick pdf creation
 nnoremap <Leader>p :Pandoc --template=~/Git/projection-bias/config/latex.template pdf<cr>
+
+" Toggle visibility of hidden symbols
+nmap <leader>l :set list!<CR>
+
+" Change tab to show as triangle, eol as logical not.
+set listchars=tab:▸\ ,eol:¬
+
+" Map jj to quit insert mode
+:inoremap jj <ESC>
