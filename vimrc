@@ -42,3 +42,11 @@ set listchars=tab:▸\ ,eol:¬
 
 " Map jj to quit insert mode
 :inoremap jj <ESC>
+
+" Bubble single lines up and down.
+nmap <C-k> ddkP
+nmap <C-j> ddP
+
+" Bubble multiple lines visually selected.
+vmap <C-k> xkP`[V`]
+vmap <C-j> xp`[V`]
