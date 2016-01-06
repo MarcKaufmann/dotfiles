@@ -50,3 +50,6 @@ nmap <C-j> ddP
 " Bubble multiple lines visually selected.
 vmap <C-k> xkP`[V`]
 vmap <C-j> xp`[V`]
+
+" Integrate Zeal with Vim
+:nnoremap gz :!zeal --query "<cword>"&<CR><CR>
