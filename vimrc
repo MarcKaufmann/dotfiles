@@ -51,5 +51,8 @@ nmap <C-j> ddP
 vmap <C-k> xkP`[V`]
 vmap <C-j> xp`[V`]
 
+" Turn on spellchek
+:setlocal spell spelllang=en_us
+
 " Integrate Zeal with Vim
 :nnoremap gz :!zeal --query "<cword>"&<CR><CR>
