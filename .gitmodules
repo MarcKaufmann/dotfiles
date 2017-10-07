@@ -11,7 +11,7 @@
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
 	ignore = dirty
 [submodule "bundle/vim-snippets"]
-	path = bundle/vim-snippets
+	path = UltiSnips/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 [submodule "bundle/julia-vim"]
 	path = bundle/julia-vim
