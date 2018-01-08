@@ -32,8 +32,8 @@ set ts=4 sts=4 sw=4 noexpandtab
 set lispwords+=define-type,type-case,syntax-case,syntax-rules
 
 " Quick pdf creation
-nnoremap <Leader>p :Pandoc --template=~/Git/grand-schemer/web/education/latex.template pdf<cr>
-nnoremap <Leader>r :Pandoc --template=~/Git/grand-schemer/beamer/marc.beamer beamer<cr>
+nnoremap <Leader>p :Pandoc --template=~/Git/grand-schemer/latex/latex.template pdf<cr>
+nnoremap <Leader>r :Pandoc --template=~/Git/grand-schemer/latex/marc.beamer beamer<cr>
 
 " Toggle visibility of hidden symbols
 nmap <leader>l :set list!<CR>
