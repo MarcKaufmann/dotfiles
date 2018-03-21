@@ -58,3 +58,15 @@ vmap <C-j> xp`[V`]
 
 " Integrate Zeal with Vim
 :nnoremap gz :!zeal --query "<cword>"&<CR><CR>
+
+" Edit and source vimrc
+:nnoremap <leader>ev :vs $MYVIMRC<cr>
+:nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Commend out the visual selection, assuming it's visual line mode
+" TODO: I should fix this so that it actually ensures it's visual line mode
+" Somehow this does not work...
+" :vnoremap <leader>cc <esc>'<O<!---<esc>'>o--><esc>
+
+" Shortcuts 
+:nnoremap <leader>hh oHungarian: <=> <esc>Bi
