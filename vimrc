@@ -1,12 +1,3 @@
-" My leader
-let mapleader = "\\"
-
-" Make it easy to make it easy to edit text
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-
-" Source MYVIMRC
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
 " Pathogen load
 filetype off
 set nocp
@@ -71,9 +62,25 @@ vmap <C-j> xp`[V`]
 " Enter a Hungarian sentence I want to learn
 nnoremap <leader>h i<hungarian><cr></hungarian><esc>O
 
+" Email abbreviation
+iabbrev @@ marc.kaufmannmk@gmail.com
+
+" Edit and source vimrc
+:nnoremap <leader>ev :vs $MYVIMRC<cr>
+:nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Commend out the visual selection, assuming it's visual line mode
+" TODO: I should fix this so that it actually ensures it's visual line mode
+" Somehow this does not work...
+" :vnoremap <leader>cc <esc>'<O<!---<esc>'>o--><esc>
+
+" Shortcuts 
+:nnoremap <leader>hh oHungarian: <=> <esc>Bi
+
 " Enter Hungarian o ő, and Ő
 inoremap "o" ő
 inoremap "O" Ő
 
-" Email abbreviation
-iabbrev @@ marc.kaufmannmk@gmail.com
+" My leader
+let mapleader = "\\"
+
