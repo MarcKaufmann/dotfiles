@@ -1,3 +1,12 @@
+" My leader
+let mapleader = "\\"
+
+" Make it easy to make it easy to edit text
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" Source MYVIMRC
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Pathogen load
 filetype off
 set nocp
@@ -58,3 +67,13 @@ vmap <C-j> xp`[V`]
 
 " Integrate Zeal with Vim
 :nnoremap gz :!zeal --query "<cword>"&<CR><CR>
+
+" Enter a Hungarian sentence I want to learn
+nnoremap <leader>h i<hungarian><cr></hungarian><esc>O
+
+" Enter Hungarian o ő, and Ő
+inoremap "o" ő
+inoremap "O" Ő
+
+" Email abbreviation
+iabbrev @@ marc.kaufmannmk@gmail.com
