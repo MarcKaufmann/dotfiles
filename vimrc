@@ -59,6 +59,12 @@ vmap <C-j> xp`[V`]
 " Integrate Zeal with Vim
 :nnoremap gz :!zeal --query "<cword>"&<CR><CR>
 
+" Enter a Hungarian sentence I want to learn
+nnoremap <leader>h i<hungarian><cr></hungarian><esc>O
+
+" Email abbreviation
+iabbrev @@ marc.kaufmannmk@gmail.com
+
 " Edit and source vimrc
 :nnoremap <leader>ev :vs $MYVIMRC<cr>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -70,3 +76,11 @@ vmap <C-j> xp`[V`]
 
 " Shortcuts 
 :nnoremap <leader>hh oHungarian: <=> <esc>Bi
+
+" Enter Hungarian o ő, and Ő
+inoremap "o" ő
+inoremap "O" Ő
+
+" My leader
+let mapleader = "\\"
+
