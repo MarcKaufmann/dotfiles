@@ -84,3 +84,60 @@ inoremap "O" Ő
 " My leader
 let mapleader = "\\"
 
+" Racket auto commands {{{
+augroup racketgroup
+	autocmd! 
+	autocmd FileType scheme nnoremap <buffer> <localleader>c I;<esc>
+	autocmd FileType scheme :iabbrev <buffer> #lr #lang racket
+augroup END
+" }}}
+
+" Operator-pending mappings from VimScript {{{
+" It's a beautiful list, isn't it?
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap in) :<c-u>normal! f(vi(<cr>
+onoremap il( :<c-u>normal! F)vi(<cr>
+onoremap il) :<c-u>normal! F)vi(<cr>
+onoremap in{ :<c-u>normal! f{vi{<cr>
+onoremap in} :<c-u>normal! f{vi{<cr>
+onoremap il{ :<c-u>normal! F}vi{<cr>
+onoremap il} :<c-u>normal! F}vi{<cr>
+onoremap in[ :<c-u>normal! f[vi[<cr>
+onoremap in] :<c-u>normal! f[vi[<cr>
+onoremap il[ :<c-u>normal! F]vi[<cr>
+onoremap il] :<c-u>normal! F]vi[<cr>
+onoremap an( :<c-u>normal! f(va(<cr>
+onoremap an) :<c-u>normal! f(va(<cr>
+onoremap al( :<c-u>normal! F)va(<cr>
+onoremap al) :<c-u>normal! F)va(<cr>
+onoremap an{ :<c-u>normal! f{va{<cr>
+onoremap an} :<c-u>normal! f{va{<cr>
+onoremap al{ :<c-u>normal! F}va{<cr>
+onoremap al} :<c-u>normal! F}va{<cr>
+onoremap an[ :<c-u>normal! f[va[<cr>
+onoremap an] :<c-u>normal! f[va[<cr>
+onoremap al[ :<c-u>normal! F]va[<cr>
+onoremap al] :<c-u>normal! F]va[<cr>
+" }}}
+
+" Markdown mappings for top headings {{{
+augroup markdowngroup
+	autocmd!
+	autocmd FileType pandoc onoremap <buffer> ih :<c-u>execute "normal! ?^#\\+ \\zs\rvg_"<cr>
+augroup END
+" }}}
+
+" Status Line {{{
+set laststatus=2
+set statusline=File:\ %.30F		" File path, maximum 30 characters
+set statusline+=%=				" Switch to the right side 
+set statusline+=Current:\ %-4l	" Print current line number, at least 4 spaces
+set statusline+=\ Total:\ %-4L	" Print the total line number, at least 4 spaces
+" }}}
+
+" Folding for vim files ------- {{{
+augroup filetype_vim
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
