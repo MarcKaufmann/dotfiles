@@ -124,6 +124,7 @@ onoremap al] :<c-u>normal! F]va[<cr>
 augroup markdowngroup
 	autocmd!
 	autocmd FileType pandoc onoremap <buffer> ih :<c-u>execute "normal! ?^#\\+ \\zs\rvg_"<cr>
+	autocmd FileType pandoc nnoremap <buffer> <leader>b :execute "normal! mbA\\pause{}\e`b"<cr>
 augroup END
 " }}}
 
