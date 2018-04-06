@@ -59,9 +59,6 @@ vmap <C-j> xp`[V`]
 " Integrate Zeal with Vim
 :nnoremap gz :!zeal --query "<cword>"&<CR><CR>
 
-" Enter a Hungarian sentence I want to learn
-nnoremap <leader>h i<hungarian><cr></hungarian><esc>O
-
 " Email abbreviation
 iabbrev @@ marc.kaufmannmk@gmail.com
 
