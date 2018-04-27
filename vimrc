@@ -60,7 +60,7 @@ vmap <C-j> xp`[V`]
 :nnoremap gz :!zeal --query "<cword>"&<CR><CR>
 
 " Email abbreviation
-iabbrev @@ marc.kaufmannmk@gmail.com
+" iabbrev @@ marc.kaufmannmk@gmail.com
 
 " Edit and source vimrc
 :nnoremap <leader>ev :vs $MYVIMRC<cr>
@@ -139,3 +139,10 @@ augroup filetype_vim
 	autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
+
+" Latex shortcuts ----------- {{{
+augroup latex_commands
+	autocmd!
+	autocmd FileType pandoc :iabbrev <buffer> \R \mathbb{R}
+	autocmd FileType pandoc :iabbrev <buffer> \N \mathbb{N}
+augroup END
