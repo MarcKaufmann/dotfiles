@@ -143,6 +143,4 @@ augroup END
 " Latex shortcuts ----------- {{{
 augroup latex_commands
 	autocmd!
-	autocmd FileType pandoc :iabbrev <buffer> \R \mathbb{R}
-	autocmd FileType pandoc :iabbrev <buffer> \N \mathbb{N}
 augroup END
