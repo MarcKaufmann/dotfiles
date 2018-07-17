@@ -77,6 +77,9 @@ vmap <C-j> xp`[V`]
 " Enter Hungarian o ő, and Ő
 inoremap "o" ő
 inoremap "O" Ő
+inoremap öö ő
+inoremap ÖÖ Ő
+
 
 " My leader
 let mapleader = "\\"
