@@ -150,3 +150,5 @@ augroup END
 
 " Allow saving of files as sudo when I forgot to open as sudo
 cmap w!! w !sudo tee > /dev/null %
+
+set tags=tags;~
