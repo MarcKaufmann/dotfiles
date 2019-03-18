@@ -27,7 +27,7 @@ syntax on
 au BufNewFile,BufRead *.md set filetype=markdown
 
 " Set spacing 
-set ts=4 sts=4 sw=4 noexpandtab
+set ts=4 sts=4 sw=4 expandtab
 
 " Add keywords to the syntax of racket.
 set lispwords+=define-type,type-case,syntax-case,syntax-rules
@@ -89,6 +89,7 @@ augroup racketgroup
 	autocmd! 
 	autocmd FileType scheme nnoremap <buffer> <localleader>c I;<esc>
 	autocmd FileType scheme :iabbrev <buffer> #lr #lang racket
+	autocmd FileType scheme nnoremap <buffer> <localleader>t :execute '!raco test %'<cr>
 augroup END
 " }}}
 
@@ -152,3 +153,12 @@ augroup END
 cmap w!! w !sudo tee > /dev/null %
 
 set tags=tags;~
+
+" vim-test config so that test output goes to quickfix window
+let test#strategy = "dispatch"
+
+" configure slime
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
+nnoremap <leader>r :SlimeSendAll<cr>
