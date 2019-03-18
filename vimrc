@@ -34,7 +34,7 @@ set lispwords+=define-type,type-case,syntax-case,syntax-rules
 
 " Quick pdf creation
 nnoremap <Leader>p :Pandoc --template=/home/marc/Git/grand-schemer/latex/latex.template pdf<cr>
-nnoremap <Leader>r :Pandoc --template=/home/marc/Git/grand-schemer/latex/marc.beamer beamer<cr>
+nnoremap <Leader>b :Pandoc --template=/home/marc/Git/grand-schemer/latex/marc.beamer beamer<cr>
 
 " Toggle visibility of hidden symbols
 nmap <leader>l :set list!<CR>
@@ -125,7 +125,7 @@ onoremap al] :<c-u>normal! F]va[<cr>
 augroup markdowngroup
 	autocmd!
 	autocmd FileType pandoc onoremap <buffer> ih :<c-u>execute "normal! ?^#\\+ \\zs\rvg_"<cr>
-	autocmd FileType pandoc nnoremap <buffer> <leader>b :execute "normal! mbA\\pause{}\e`b"<cr>
+	autocmd FileType pandoc nnoremap <buffer> <leader>br :execute "normal! mbA\\pause{}\e`b"<cr>
 augroup END
 " }}}
 
@@ -157,7 +157,7 @@ set tags=tags;~
 " vim-test config so that test output goes to quickfix window
 let test#strategy = "dispatch"
 
-" configure slime
+" Slime config for tmux
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
