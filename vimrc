@@ -158,3 +158,6 @@ let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 nnoremap <leader>r :SlimeSendAll<cr>
+
+nnoremap <leader>t :execute '!raco test -t .'<cr>
+nnoremap <leader>h :execute '!raco test -t %'<cr>
