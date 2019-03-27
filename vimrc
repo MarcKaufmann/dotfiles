@@ -89,6 +89,7 @@ augroup racketgroup
 	autocmd! 
 	autocmd FileType scheme nnoremap <buffer> <localleader>c I;<esc>
 	autocmd FileType scheme :iabbrev <buffer> #lr #lang racket
+	autocmd FileType scheme nnoremap <buffer> <localleader>t :execute '!raco test %'<cr>
 augroup END
 " }}}
 
@@ -152,6 +153,9 @@ augroup END
 cmap w!! w !sudo tee > /dev/null %
 
 set tags=tags;~
+
+" vim-test config so that test output goes to quickfix window
+let test#strategy = "dispatch"
 
 " Slime config for tmux
 let g:slime_target = "tmux"
