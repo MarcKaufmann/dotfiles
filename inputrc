@@ -5,3 +5,8 @@ $if mode=vi
 	set keymap vi-insert
 	"jj": vi-movement-mode
 $endif
+
+# Map up and down arrows to search the history forward or backward
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
