@@ -165,3 +165,6 @@ nnoremap <leader>r :SlimeSendAll<cr>
 
 nnoremap <leader>t :execute '!raco test -t .'<cr>
 nnoremap <leader>h :execute '!raco test -t %'<cr>
+
+" Navigation shortcuts
+nnoremap <leader><leader> <c-^>
