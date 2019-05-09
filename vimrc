@@ -8,6 +8,9 @@ set rtp+=~/.vim/bundle
 
 execute pathogen#infect()
 
+" My leader
+let mapleader = ","
+
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -80,9 +83,6 @@ inoremap "O" Ő
 inoremap öö ő
 inoremap ÖÖ Ő
 
-
-" My leader
-let mapleader = "\\"
 
 " Racket auto commands {{{
 augroup racketgroup
@@ -165,3 +165,11 @@ nnoremap <leader>r :SlimeSendAll<cr>
 
 nnoremap <leader>t :execute '!raco test -t .'<cr>
 nnoremap <leader>h :execute '!raco test -t %'<cr>
+
+" Mappings for command t
+nnoremap <leader>f :CommandT<cr>
+
+" Mappings from Gary Bernhardt
+" Use expressions register <C-R>= to expand the current file (%) and get its
+" header only (:h) and append a / (.'/')
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
