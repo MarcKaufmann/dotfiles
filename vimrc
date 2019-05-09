@@ -14,7 +14,7 @@ let mapleader = ","
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/Ultisnips', 'UltiSnips']
 
@@ -173,3 +173,7 @@ nnoremap <leader>f :CommandT<cr>
 " Use expressions register <C-R>= to expand the current file (%) and get its
 " header only (:h) and append a / (.'/')
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Navigation shortcuts
+" Go to alternate file
+nnoremap <leader><leader> <c-^>
