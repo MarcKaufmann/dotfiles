@@ -16,18 +16,18 @@ This is largely built on a subset of [Bogdan Popa's dotiles](https://github.com/
     - pull up the [pinboard bookmarklet](https://pinboard.in/howto/) to the bookmarks toolbar, which has to be visible
 - Install RStudio
 - Install Racket
-- Install Doom Emacs
-    - Much of that can be automated, once there is no bug anymore
-- Move all my repositories to GitHub. Stop having duplicates across github and gitlab.
-    - Obviously back them up regularly to my server
 - Remap Capslock to Ctrl
 - Install 1Password
 
 ## todo
 
+- Install Doom Emacs
+    - Much of that can be automated, once there is no bug anymore
+- Move all my repositories to GitHub. Stop having duplicates across github and gitlab.
+    - Obviously back them up regularly to my server
+- Clone repositories
 - Create repo for new dotfiles on github. Remove old one probably.
 - Install Doom Emacs and configure (ESS modes etc)
 - Install latex
 - Configure tmux
 - Install Anki
-- vi mode on the cli
