@@ -44,14 +44,15 @@ while IFS= read -r PKG; do
     fi
 done < "$ROOT/packages"
 
+
 # Racket
 
 RACKET_APP="/Applications/Racket v${RACKET_VERSION}" 
 if [ -d "$RACKET_APP" ]; then
     RACKET_BIN="$RACKET_APP/bin"
-    ln -s "$RACKET_BIN/racket" "$HOME/bin/racket"
-    ln -s "$RACKET_BIN/raco" "$HOME/bin/raco"
-    ln -s "$RACKET_BIN/drracket" "$HOME/bin/drracket"
+    ln -sf "$RACKET_BIN/racket" "$HOME/bin/racket"
+    ln -sf "$RACKET_BIN/raco" "$HOME/bin/raco"
+    ln -sf "$RACKET_BIN/drracket" "$HOME/bin/drracket"
 else
     log "Could not find an installation for Racket version ${RACKET_VERSION} in ${RACKET_APP}."
 fi
