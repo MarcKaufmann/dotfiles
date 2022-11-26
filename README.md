@@ -19,9 +19,12 @@ This is largely built on a subset of [Bogdan Popa's dotiles](https://github.com/
 - Install Racket
 - Install Doom Emacs
     - Much of that can be automated, once there is no bug anymore
+- Move all my repositories to GitHub. Stop having duplicates across github and gitlab.
+    - Obviously back them up regularly to my server
 
 ## todo
 
+- Add .zshrc to dotfiles, and then link it to $HOME
 - Doom Emacs
 - Create repo for dotfiles
 - Configure vim (copy my vim config file from current dotfiles)
