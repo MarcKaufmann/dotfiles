@@ -60,4 +60,5 @@ fi
 # Vim
 link "vimrc" "$HOME/.vimrc"
 
-
+# Shell config 
+link "zshrc" "$HOME/.zshrc"
