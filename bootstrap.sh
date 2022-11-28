@@ -57,6 +57,21 @@ else
     log "Could not find an installation for Racket version ${RACKET_VERSION} in ${RACKET_APP}."
 fi
 
+# Doom Emacs
+if [ ! -d "$HOME/.emacs.d" ]; then
+    log "Installing and configuring Doom Emacs..."
+    git clone https://github.com/hlissner/doom-emacs $HOME/.emacs.d
+    if [ ! -d "$HOME/.doom.d" ]; then
+        mkdir "$HOME/.doom.d"
+    fi
+    link "doom.d/config.el" "$HOME/.doom.d/config.el"
+    link "doom.d/init.el" "$HOME/.doom.d/init.el"
+    link "doom.d/packages.el" "$HOME/.doom.d/packages.el"
+    $HOME/.emacs.d/bin/doom sync
+    log "Installing the icon fonts needed for Doom Emacs..."
+    emacs --batch -f all-the-icons-install-fonts
+fi
+
 # Vim
 link "vimrc" "$HOME/.vimrc"
 
