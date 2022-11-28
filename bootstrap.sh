@@ -67,7 +67,8 @@ if [ ! -d "$HOME/.emacs.d" ]; then
     link "doom.d/config.el" "$HOME/.doom.d/config.el"
     link "doom.d/init.el" "$HOME/.doom.d/init.el"
     link "doom.d/packages.el" "$HOME/.doom.d/packages.el"
-    $HOME/.emacs.d/bin/doom sync
+    PATH="/Applications/MacPorts/Emacs.App/Contents/MacOS:$HOME/.emacs.d/bin:$HOME/bin:$PATH"
+    doom sync
     log "Installing the icon fonts needed for Doom Emacs..."
     emacs --batch -f all-the-icons-install-fonts
 fi
