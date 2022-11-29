@@ -47,3 +47,5 @@
 ;(package! builtin-package :recipe (:branch "develop"))
 
 (package! zeal-at-point)
+(package! scribble-mode
+  :recipe (:host github :repo "emacs-pe/scribble-mode"))

@@ -145,3 +145,8 @@ Returns its exit code."
   (setenv "MITSCHEME_HEAP_SIZE" "100000")
   (run-scheme
    "/usr/local/bin/mit-scheme --library /usr/local/lib/mit-scheme-x86-64/"))
+
+;;; Scribble
+
+(use-package! scribble-mode
+  :mode "\\.scrbl\\'")
