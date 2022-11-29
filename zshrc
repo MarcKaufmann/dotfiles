@@ -12,3 +12,4 @@ export PATH="/Applications/MacPorts/Emacs.App/Contents/MacOS:$HOME/.emacs.d/bin:
 # Aliases for folder
 alias g="cd $HOME/personal/grand-schemer"
 alias d="cd $HOME/personal/dotfiles"
+alias tt="timetracker "
