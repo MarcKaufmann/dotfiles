@@ -73,8 +73,27 @@ if [ ! -d "$HOME/.emacs.d" ]; then
     emacs --batch -f all-the-icons-install-fonts
 fi
 
+# PostgreSQL
+
+if [ ! -d "/opt/local/var/db/postgresql13/defaultdb" ]; then
+    log "Setting up PostgreSQL database..."
+    sudo mkdir -p /opt/local/var/db/postgresql13/defaultdb
+    sudo chown postgres:postgres /opt/local/var/db/postgresql13/defaultdb
+    sudo su postgres -c 'cd /opt/local/var/db/postgresql13 && /opt/local/lib/postgresql13/bin/initdb -D /opt/local/var/db/postgresql13/defaultdb'
+
+    log "Loading PostgreSQL agent..."
+    sudo port load postgresql13-server
+fi
+
+log "Selecting PostgreSQL version..."
+sudo port select postgresql postgresql13
+
+# tmux
+link "tmux.conf" "$HOME/.tmux.conf"
+
 # Vim
 link "vimrc" "$HOME/.vimrc"
 
 # Shell config 
 link "zshrc" "$HOME/.zshrc"
+link "zshenv" "$HOME/.zshenv"
