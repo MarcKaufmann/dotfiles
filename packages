@@ -17,6 +17,7 @@ jq
 nginx
 nodejs18
 npm8
+nvm
 postgresql13-server
 R
 ripgrep
@@ -25,4 +26,6 @@ redis
 tmux
 vegeta
 vim
+VLC
+youtube-dl
 yubikey-manager
