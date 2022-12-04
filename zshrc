@@ -13,3 +13,6 @@ export PATH="/Applications/MacPorts/Emacs.App/Contents/MacOS:$HOME/.emacs.d/bin:
 alias g="cd $HOME/personal/grand-schemer"
 alias d="cd $HOME/personal/dotfiles"
 alias tt="timetracker "
+
+# Source nvm
+source /opt/local/share/nvm/init-nvm.sh
