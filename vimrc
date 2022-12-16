@@ -29,7 +29,7 @@ set wrap
 " Miscellaneous
 set formatprg=par                           " Use par to format documents with gq
 set linebreak                               " Wrap at spaces
-set nowrap                                  " Turn wrapping off
+" set nowrap                                  " Turn wrapping off
 set autochdir                               " Change dir to current file automatically
 set tags+=./.tags;/
 set shell=/bin/bash
