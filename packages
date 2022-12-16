@@ -5,7 +5,7 @@ autoconf
 automake
 coreutils
 curl
-emacs-app
+emacs-mac-app
 fd
 ffmpeg
 git
