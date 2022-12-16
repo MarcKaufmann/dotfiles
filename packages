@@ -8,6 +8,7 @@ curl
 emacs-mac-app
 fd
 ffmpeg
+gimp
 git
 git-lfs
 graphviz
@@ -18,6 +19,7 @@ nginx
 nodejs18
 npm8
 nvm
+pdftk-java
 postgresql13-server
 R
 ripgrep
