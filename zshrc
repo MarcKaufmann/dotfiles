@@ -6,6 +6,9 @@ bindkey "jj" vi-cmd-mode
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
+# Search incrementally with Ctrl-r
+bindkey '^r' history-incremental-search-backward
+
 # Expose emacs binary for Doom, since MacPorts does not do so by default.
 export PATH="/Applications/MacPorts/EmacsMac.App/Contents/MacOS:$HOME/.emacs.d/bin:$HOME/bin:$PATH"
 
