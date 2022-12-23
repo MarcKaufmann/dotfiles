@@ -1,6 +1,6 @@
 # Switch vi-mode on
 bindkey -v
-bindkey -M viins jj vi-cmd-mode
+bindkey "jj" vi-cmd-mode
 
 # Search forward and backward through history with Up and Down arrow
 bindkey "^[[A" history-beginning-search-backward
