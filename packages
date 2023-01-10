@@ -19,12 +19,16 @@ nginx
 nodejs18
 npm8
 nvm
+pandoc
 pdftk-java
 postgresql13-server
 R
 ripgrep
 readline
 redis
+texlive-bibtex-extra
+texlive-latex-recommended
+texlive-plain-generic
 tmux
 vegeta
 vim
