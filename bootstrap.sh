@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-RACKET_VERSION="8.7"
+RACKET_VERSION="8.10"
 
 log () {
     printf "[%s] %s\n" "$(date)" "$@"
