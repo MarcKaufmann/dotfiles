@@ -1,3 +1,8 @@
+# Larger history
+#
+HISTFILE=~/.zsh_history
+HISTSIZE=10000000
+
 # Switch vi-mode on
 bindkey -v
 bindkey "jj" vi-cmd-mode
