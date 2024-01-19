@@ -2,6 +2,8 @@
 #
 HISTFILE=~/.zsh_history
 HISTSIZE=10000000
+SAVEHIST=$HISTSIZE
+setopt SHARE_HISTORY
 
 # Switch vi-mode on
 bindkey -v
