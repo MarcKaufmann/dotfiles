@@ -32,7 +32,9 @@ readline
 redis
 shellcheck
 texlive-bibtex-extra
+texlive-latex-extra
 texlive-latex-recommended
+texlive-math-science
 texlive-plain-generic
 tmux
 vegeta

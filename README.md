@@ -8,6 +8,23 @@ This is largely built on a subset of [Bogdan Popa's dotiles](https://github.com/
     - Install Xcode manually first?
 2. `sudo port install git`
 
+## Tex/Latex
+
+It may be that the current list of ports installed is not enough to get Latex working, in particular Beamer. In that case, check if the installing the following additional ports helps:
+
+- texlive-basic 
+- texlive-bibtex-extra 
+- texlive-bin 
+- texlive-common 
+- texlive-fonts-extra 
+- texlive-fonts-recommended 
+- texlive-latex 
+- texlive-latex-extra 
+- texlive-latex-recommended 
+- texlive-math-science 
+- texlive-pictures 
+- texlive-plain-generic 
+
 ## Manual Checklist
 
 - Map capslock to Ctrl
