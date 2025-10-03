@@ -23,9 +23,9 @@ nvm
 pandoc
 pandoc-citeproc
 pdftk-java
-postgresql13-server
-py310-pip
-python310
+postgresql16-server
+py313-pip
+python313
 R
 ripgrep
 readline

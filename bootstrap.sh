@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-RACKET_VERSION="8.17"
+RACKET_VERSION="8.18"
 
 log () {
     printf "[%s] %s\n" "$(date)" "$@"
@@ -75,18 +75,23 @@ fi
 
 # PostgreSQL
 
-if [ ! -d "/opt/local/var/db/postgresql13/defaultdb" ]; then
+if [ ! -d "/opt/local/var/db/postgresql16/defaultdb" ]; then
     log "Setting up PostgreSQL database..."
-    sudo mkdir -p /opt/local/var/db/postgresql13/defaultdb
-    sudo chown postgres:postgres /opt/local/var/db/postgresql13/defaultdb
-    sudo su postgres -c 'cd /opt/local/var/db/postgresql13 && /opt/local/lib/postgresql13/bin/initdb -D /opt/local/var/db/postgresql13/defaultdb'
+    sudo mkdir -p /opt/local/var/db/postgresql16/defaultdb
+    sudo chown postgres:postgres /opt/local/var/db/postgresql16/defaultdb
+    sudo su postgres -c 'cd /opt/local/var/db/postgresql16 && /opt/local/lib/postgresql16/bin/initdb -D /opt/local/var/db/postgresql16/defaultdb'
 
     log "Loading PostgreSQL agent..."
-    sudo port load postgresql13-server
+    if [ "$DRY_RUN" -eq 0 ]; then
+        sudo port load postgresql16-server
+    fi
+
+    log "Loading PostgreSQL version..."
+    sudo port load postgresql16-server
 fi
 
 log "Selecting PostgreSQL version..."
-sudo port select postgresql postgresql13
+sudo port select postgresql postgresql16
 
 # tmux
 link "tmux.conf" "$HOME/.tmux.conf"
